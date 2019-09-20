@@ -25,3 +25,6 @@ Description: A stunning online rock paper scissors
      background: 0 0;
      transition: all .3s ease-in-out;
  }
+ .playerBox{
+     min-height: 300px;
+ }
