@@ -6,88 +6,143 @@ Author URI: https: //cl33per.github.io/
 Version: 1.1.1
 Description: A stunning online rock paper scissors
 */
-.jumbotron{
+.jumbotron {
     border-radius: 0;
 }
- /* Social Icons */
- .btn-social {
-     display: inline-block;
-     width: 48px;
-     height: 48px;
-     border: 1px solid #bbbbbb;
-     border-radius: 100%;
-     text-align: center;
-     font-size: 24px;
-     line-height: 46px;
- }
 
- .btn-outline {
-     border: solid 1px #bbbbbb;
-     font-size: 24px;
-     color: #bbbbbb;
-     background: 0 0;
-     transition: all .3s ease-in-out;
- }
+/* Social Icons */
+.btn-social {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #bbbbbb;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 46px;
+}
+
+.btn-outline {
+    border: solid 1px #bbbbbb;
+    font-size: 24px;
+    color: #bbbbbb;
+    background: 0 0;
+    transition: all .3s ease-in-out;
+}
 
 /* PlayersBoxes Adjustments*/
- .playerBox{
-     min-height: 300px;
- }
- .gameIcons{
-     max-width:50%; 
- }
+.playerBox {
+    min-height: 300px;
+}
 
- /* Sidebar */
- .sidebar {
-     position: fixed;
-     top: 0;
-     bottom: 0;
-     left: 0;
-     z-index: 100;
-     /* Behind the navbar */
-     padding: 48px 0 0;
-     /* Height of navbar */
-     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
- }
+.gameIcons {
+    max-width: 50%;
+}
 
- .sidebar-sticky {
-     position: relative;
-     top: 0;
-     height: calc(100vh - 48px);
-     padding-top: .5rem;
-     overflow-x: hidden;
-     overflow-y: auto;
-     /* Scrollable contents if viewport is shorter than content. */
- }
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 48px 0 0;
+    /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
 
- @supports ((position: -webkit-sticky) or (position: sticky)) {
-     .sidebar-sticky {
-         position: -webkit-sticky;
-         position: sticky;
-     }
- }
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
 
- .sidebar .nav-link {
-     font-weight: 500;
-     color: #333;
- }
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
 
- .sidebar .nav-link .feather {
-     margin-right: 4px;
-     color: #999;
- }
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
 
- .sidebar .nav-link.active {
-     color: #007bff;
- }
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
 
- .sidebar .nav-link:hover .feather,
- .sidebar .nav-link.active .feather {
-     color: inherit;
- }
+.sidebar .nav-link.active {
+    color: #007bff;
+}
 
- .sidebar-heading {
-     font-size: .75rem;
-     text-transform: uppercase;
- }
- /* Sidebar END */
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/* Sidebar END */
+
+/* ChatBox */
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li {
+    padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+}
+/* ChatBox */
+form {
+    background: #000;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form input {
+    border: 0;
+    padding: 10px;
+    width: 90%;
+    margin-right: .5%;
+}
+
+form button {
+    width: 9%;
+    background: rgb(130, 224, 255);
+    border: none;
+    padding: 10px;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li {
+    padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+}
+/*ChatBox END  */

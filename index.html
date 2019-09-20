@@ -82,9 +82,9 @@
     <div class="col-md-3 d-none d-md-block bg-light sidebar"">
             <div class=" sidebar-sticky">
         <h4 class="idebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 ">Game Chatbox</h4>
-        <form>
-            <p>Your message: </p>
-            <textarea id="posttext" maxlength="120"></textarea>
+        <ul id="messages"></ul>
+        <form action="">
+            <input id="m" autocomplete="off" /><button>Send</button>
         </form>
     </div>
     </div>
@@ -107,7 +107,21 @@
     <!-- Local Script -->
     <script src='assets/js/databaseValidation.js'></script>
     <script src='assets/js/app.js'></script>
-    <script src='assets/js/chatbox.js'></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src='assets/js/chatbox.js'></script> -->
+    <script>
+        $(function () {
+            var socket = io();
+            $('form').submit(function (e) {
+                e.preventDefault(); // prevents page reloading
+                socket.emit('chat message', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
+            socket.on('chat message', function (msg) {
+                $('#messages').append($('<li>').text(msg));
+            });
+        });
+    </script>
 </body>
-
 </html>
