@@ -33,20 +33,7 @@ $(document).ready(function () {
     var playerTwoWin = database.ref('/players/2/Wins');
     var playerTwoLoss = database.ref('/players/2/Loss');
     var playerTwoChoice = database.ref('/players/2/Choice');
-
-    var playerOneWinCount = 0;
-    var playerOneLossCount = 0;
-    var playerOneName = null;
-    var playerTwoWinCount = 0;
-    var playerTwoLossCount = 0;
-    var playerTwoName = null;
-
-    var playerOneTurn = false;
-    var playerTwoTurn = false;
-
-    var playerChoices = ['rock', 'paper', 'scissors'];
-    var playerOneChoice = null;
-    var playerTwoChoice = null;
+   
 
     // When the client's connection state changes...
     connectedRef.on("value", function (snap) {

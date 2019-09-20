@@ -22,65 +22,72 @@
     </nav>
 
     <!-- Start Main Body -->
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="display-3">Welcome Players</h1>
-        <p>The game is simple, add a username and wait for the next player. Once there are two players online the game will begin. There is a chatbox in the bottom for all who are either watching or playing enjoy!</p>
-        <p><a class="btn btn-primary btn-lg" href="https://github.com/cl33per/RPS-Multiplayer" target="_blank" role="button">Learn more
-                »</a></p>
+    <div class="jumbotron col-md-8 ml-sm-auto col-lg-9 px-4">
+        <div class="container">
+            <h1 class="display-3">Welcome Players</h1>
+            <p>The game is simple, add a username and wait for the next player. Once there are two players online the
+                game will begin. There is a chatbox in the bottom for all who are either watching or playing enjoy!</p>
+            <p><a class="btn btn-primary btn-lg" href="https://github.com/cl33per/RPS-Multiplayer" target="_blank"
+                    role="button">Learn more
+                    »</a></p>
+        </div>
     </div>
-</div>
-        <div class="d-flex align-items-center my-5">
+    <div class="d-flex align-items-center my-5 col-md-8 ml-sm-auto col-lg-9 px-4">
         <div class="container text-center">
             <div class="row">
                 <div id="playerOne" class="playerBox col-lg-4 shadow-lg p-3 bg-white rounded">
-                    <h4>Player One</h4>
+                    <h4 id="playerOneName">Player One</h4>
                     <table class="table table-striped my-5">
                         <thead class="table-dark">
                             <tr>
                                 <th>Wins</th>
                                 <th>Loses</th>
-                                <th>Ties</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td id="">Test</td>
-                                <td id="">Test</td>
-                                <td id="">Test</td>
+                                <td id="playerOneWinCount">0</td>
+                                <td id="playerOneLossCount">0</td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="col-lg-12">
+                        <img id="PlayTwogameIcon" src="/assets/images/paper.png" class="img img-fluid gameIcons" alt="">
+                    </div>
                 </div>
                 <div id="GameBox" class="playerBox col-lg-4 shadow-lg p-3 bg-white rounded"></div>
                 <div id="playerTwo" class="playerBox col-lg-4 shadow-lg p-3 bg-white rounded">
-                    <h4>Player Two</h4>
+                    <h4 id="playerTwoName">Player Two</h4>
                     <table class="table table-striped my-5">
                         <thead class="table-dark">
                             <tr>
                                 <th>Wins</th>
                                 <th>Loses</th>
-                                <th>Ties</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td id="">Test</td>
-                                <td id="">Test</td>
-                                <td id="">Test</td>
+                                <td id="">0</td>
+                                <td id="">0</td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="col-lg-12">
+                        <img id="PlayTwogameIcon" src="/assets/images/paper.png" class="img img-fluid gameIcons" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="jumbotron">
-            <div class="container">
-                <h4>Game Chatbox</h4>
-                <div class=""></div>
-            </div>
-        </div>  
+    </div>
+    <div class="col-md-3 d-none d-md-block bg-light sidebar"">
+            <div class=" sidebar-sticky">
+        <h4 class="idebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 ">Game Chatbox</h4>
+        <form>
+            <p>Your message: </p>
+            <textarea id="posttext" maxlength="120"></textarea>
+        </form>
+    </div>
+    </div>
     <!-- Footer Scripts -->
     <!-- Jquery Script -->
     <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
