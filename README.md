@@ -1,6 +1,6 @@
 
 # RPS-Multiplayer
-https://img.shields.io/github/issues/cl33per/RPS-Multiplayer
+[![GitHub issues](https://img.shields.io/github/issues/cl33per/RPS-Multiplayer)](https://github.com/cl33per/RPS-Multiplayer/issues)
 ### Summary
 RPS-Multiplayer is a Multiplayer game of rocker paper scissors connecting to firebase. It logs the connections of each players session. 
 
